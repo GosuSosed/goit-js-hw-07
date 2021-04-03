@@ -1,6 +1,6 @@
 const listCategories = document.querySelector('#categories');
 console.log(listCategories);
-const listCategoriesCount = `В списке ${listCategories.children.length} категорий`;
+const listCategoriesCount = `В списке ${listCategories.children.length} категории.`;
 console.log(listCategoriesCount);
 
 const listCategoriesItem = listCategories.querySelectorAll('.item').forEach(el => {
