@@ -3,5 +3,8 @@ console.log(listCategories);
 const listCategoriesCount = `В списке ${listCategories.children.length} категорий`;
 console.log(listCategoriesCount);
 
-const nameCategories = listCategories.querySelector('h2');
-console.log(nameCategories);
+const listCategoriesItem = listCategories.querySelectorAll('.item').forEach(el => {
+    const title = el.firstElementChild.textContent
+    const countElementCategories = el.lastElementChild.childElementCount
+  return console.log(`Категория: ${title} \nКоличество элементов: ${countElementCategories}`)
+});
