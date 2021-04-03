@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+.js-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+}
+.js-list_item img {
+    width: 300px;
+    height: auto;
+    border-style: double;
+    border-color: coral;
+    border-width: 3px;
+    border-radius: 6px;
+}
+.js-list_item:not(:last-child) {
+    margin-right: 25px;
+}
