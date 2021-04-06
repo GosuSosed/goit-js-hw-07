@@ -17,14 +17,23 @@ const images = [
   ];
 
 const makeListImagesEl = images => images.map(({url, alt}) => {
-    const createListEl = document.createElement('li');
-    createListEl.insertAdjacentHTML('beforeend', `<img class="img-item" src="${url}" alt="${alt}">`);
-    createListEl.classList.add('js-list_item');
-    return createListEl;
+  const galleryRef = document.querySelector('#gallery');
+  galleryRef.insertAdjacentHTML('beforeend', `<li><img src="${url}" alt="${alt}" width="300px"></li>`);
+  galleryRef.classList.add('js-list', 'js-list_item');
+  return galleryRef;
 });
-// console.log(makeListImagesEl(images));
-const galleryList = document.querySelector('#gallery');
-const galleryListEl = makeListImagesEl(images);
-galleryList.append(...galleryListEl);
-galleryList.classList.add('js-list');
-console.log(galleryList);
+console.log(makeListImagesEl(images));
+
+
+  // const makeListImagesEl = images => images.map(({url, alt}) => {
+//     const createListEl = document.createElement('li');
+//     createListEl.insertAdjacentHTML('beforeend', `<img class="img-item" src="${url}" alt="${alt}">`);
+//     createListEl.classList.add('js-list_item');
+//     return createListEl;
+// });
+// // console.log(makeListImagesEl(images));
+// const galleryList = document.querySelector('#gallery');
+// const galleryListEl = makeListImagesEl(images);
+// galleryList.append(...galleryListEl);
+// galleryList.classList.add('js-list');
+// console.log(galleryList);

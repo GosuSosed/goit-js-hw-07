@@ -5,12 +5,12 @@ console.log(dataLength);
 
 const onInputFocus = () => {console .log('click')};
 const onInputBlur = (event) => {
-   if (event.target.value.length < dataLength) {
-    event.target.classList.add('invalid')
-    event.target.classList.remove('valid')
-   } else {
+   if (event.target.value.length === Number(dataLength)) {
     event.target.classList.add('valid')
     event.target.classList.remove('invalid')
+   } else {
+    event.target.classList.add('invalid')
+    event.target.classList.remove('valid')
    }
    console.log('event=>', event.target.value.length);
 };
