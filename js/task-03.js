@@ -16,13 +16,15 @@ const images = [
     },
   ];
 
+const galleryRef = document.querySelector('#gallery');
+
 const makeListImagesEl = images => images.map(({url, alt}) => {
-  const galleryRef = document.querySelector('#gallery');
-  galleryRef.insertAdjacentHTML('beforeend', `<li><img src="${url}" alt="${alt}" width="300px"></li>`);
-  galleryRef.classList.add('js-list', 'js-list_item');
-  return galleryRef;
-});
-console.log(makeListImagesEl(images));
+  return `<li><img src="${url}" alt="${alt}" width="300px"></li>`;
+}).join('');
+
+const addEl = makeListImagesEl(images);
+galleryRef.insertAdjacentHTML('beforeend', addEl);
+galleryRef.classList.add('js-list', 'js-list_item');
 
 
   // const makeListImagesEl = images => images.map(({url, alt}) => {
